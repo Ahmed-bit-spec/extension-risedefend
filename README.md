@@ -1,88 +1,101 @@
-# RiseDefend — Free-Use Proprietary License
+# RiseDefend
 
-**Copyright © 2026 RiseDefend. All rights reserved.**
+RiseDefend is a free security-focused browser extension designed to help users protect and control their browsing experience.
 
-## 1. Grant of License
+## Features
 
-Subject to the terms of this License, you are granted a limited, non-exclusive, non-transferable, revocable, royalty-free license to download and use the compiled RiseDefend application or extension for personal or authorized organizational use.
+* Free to download and use
+* Easy browser installation
+* Lightweight and simple to use
+* Privacy-focused
+* Designed for everyday browsing protection
 
-RiseDefend is provided free of charge. No payment is required to obtain or use the software, unless separately stated by the copyright owner.
+##  Download
 
-## 2. Restrictions
+You can download the latest version of RiseDefend from the **GitHub Releases** page.
 
-You may **not**, without prior written permission from the copyright owner:
+1. Open the **Releases** section of this repository.
+2. Select the latest release.
+3. Download the `RiseDefend-*.zip` file from **Assets**.
+4. Extract the ZIP file.
+5. Follow the installation instructions for your browser.
 
-* Copy or reproduce the source code or substantial portions of the software.
-* Modify, adapt, translate, or create derivative works from the software.
-* Reverse engineer, decompile, or disassemble the software, except where such activity cannot legally be prohibited under applicable law.
-* Repackage or redistribute RiseDefend or modified versions of it.
-* Sell, rent, lease, sublicense, or otherwise commercially distribute RiseDefend.
-* Publish the source code or make the source code available to others.
-* Remove or alter copyright, trademark, license, or attribution notices.
-* Use RiseDefend as the basis for another product or service without written permission.
-* Upload unauthorized copies of RiseDefend to other download sites, repositories, app stores, or distribution platforms.
+##  Installation
 
-## 3. Source Code
+### Chrome / Chromium-based browsers
 
-The RiseDefend source code is **proprietary and closed source**.
+1. Download and extract the RiseDefend ZIP file.
+2. Open your browser's extension management page.
+3. Enable **Developer mode**.
+4. Select **Load unpacked**.
+5. Select the extracted RiseDefend extension folder.
+6. RiseDefend should now appear in your extensions list.
 
-This License does not grant you access to, ownership of, or rights to obtain the original source code, development files, build scripts, private repositories, or other materials used to create RiseDefend.
+> Installation steps may differ depending on the browser and release format.
 
-Only the compiled/distributed version of RiseDefend is licensed to you under this License.
+##  Usage
 
-## 4. Free Distribution by the Copyright Owner
+After installation:
 
-The copyright owner may make RiseDefend available for free through official websites, extension stores, repositories, or other distribution channels.
+1. Open your browser.
+2. Click the RiseDefend extension icon.
+3. Configure the available options.
+4. Continue browsing with RiseDefend enabled.
 
-The fact that RiseDefend is free to download does **not** mean that RiseDefend is open source or that users receive ownership of the software.
+## Free to Use
 
-## 5. Ownership
+RiseDefend is provided free of charge.
 
-RiseDefend and all associated source code, software architecture, original artwork, branding, documentation, and other original materials remain the property of the copyright owner.
+You may download and use the released version without purchasing a license.
 
-No ownership or intellectual-property rights are transferred to you by downloading or using RiseDefend.
+## License
 
-## 6. Third-Party Components
+RiseDefend is distributed under the **RiseDefend Free-Use Proprietary License**.
 
-RiseDefend may contain third-party libraries, frameworks, or other components that are licensed under their own terms.
+The software may be free to download and use, but the copyright and intellectual-property rights remain with the copyright owner.
 
-Those components remain subject to their respective licenses. This License does not override rights granted by applicable third-party licenses.
+Unless explicitly permitted by the license, you may not:
 
-## 7. Termination
+* Copy the source code for redistribution.
+* Modify or create derivative versions.
+* Repackage RiseDefend.
+* Redistribute unauthorized copies.
+* Sell or sublicense RiseDefend.
+* Remove copyright or license notices.
+* Use RiseDefend as the basis of another product.
 
-Your rights under this License automatically terminate if you violate its terms.
+See [`LICENSE`](LICENSE) for the complete terms.
 
-Upon termination, you must stop using and distributing unauthorized copies of RiseDefend and, where legally required, remove unauthorized copies under your control.
+##  Third-Party Components
 
-## 8. No Warranty
+RiseDefend may use third-party libraries or components.
 
-RiseDefend is provided **"AS IS"** and **"AS AVAILABLE"**, without warranties of any kind, express or implied, to the maximum extent permitted by applicable law.
+Third-party components remain subject to their respective licenses. Where required, applicable notices and license information are included with the release.
 
-The copyright owner does not guarantee that RiseDefend will always operate without errors, interruptions, or defects.
+## Privacy
 
-## 9. Limitation of Liability
+RiseDefend is designed with privacy in mind.
 
-To the maximum extent permitted by applicable law, the copyright owner shall not be liable for any indirect, incidental, special, consequential, or other damages arising from the use of or inability to use RiseDefend.
+Please review the documentation and permissions requested by each release before installation.
 
-## 10. Applicable Law
+##  Issues
 
-This License shall be interpreted and enforced according to the applicable laws of the jurisdiction in which the copyright owner is legally established, except where applicable law requires otherwise.
+If you find a bug or have a problem with RiseDefend, please open an issue in this repository and provide:
 
-## 11. Permission Requests
+* Browser and version
+* RiseDefend version
+* Operating system
+* Description of the problem
+* Steps to reproduce the issue
 
-If you would like permission to:
+Do not include passwords, private information, or other sensitive data in an issue.
 
-* modify RiseDefend,
-* redistribute RiseDefend,
-* integrate RiseDefend into another product,
-* obtain access to source code, or
-* use RiseDefend commercially,
+## 📦 Releases
 
-you must obtain prior written permission from the copyright owner.
+Official releases are published through the GitHub **Releases** section.
 
-## 12. Acceptance
+Only download RiseDefend from a trusted official release source.
 
-By downloading, installing, or using RiseDefend, you acknowledge that you have read and understood this License and agree to its applicable terms.
+## © Copyright
 
-**RiseDefend**
-**Copyright © 2026 RiseDefend. All rights reserved.**
+Copyright © 2026 RiseDefend. All rights reserved.
