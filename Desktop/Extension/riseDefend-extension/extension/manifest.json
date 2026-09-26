@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "RiseDefend",
+  "version": "2.0",
+  "description": "Smart AI-driven protection against harmful and gambling content.",
+
+  "permissions": [
+    "declarativeNetRequest",
+    "storage",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["core/*", "data/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_title": "RiseDefend Dashboard"
+  }
+}

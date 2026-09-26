@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "RiseDefend AI Protection",
+  "version": "1.0.0",
+  "description": "Production-level AI-driven system to block harmful content (pornography, gambling, drugs).",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "storage",
+    "activeTab",
+    "scripting",
+    "identity"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "icons": {
+    "16": "icons/risedefend-icon-16.png",
+    "32": "icons/risedefend-icon-32.png",
+    "48": "icons/risedefend-icon-48.png",
+    "128": "icons/risedefend-icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "RiseDefend Control Panel",
+    "default_icon": {
+      "16": "icons/risedefend-icon-16.png",
+      "32": "icons/risedefend-icon-32.png",
+      "48": "icons/risedefend-icon-48.png",
+      "128": "icons/risedefend-icon-128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "blocked.html",
+        "blocked.js",
+        "icons/*",
+        "*.css",
+        "assets/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

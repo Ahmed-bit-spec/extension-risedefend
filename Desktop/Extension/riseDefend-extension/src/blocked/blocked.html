@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Blocked — RiseDefend</title>
+  <style>
+    :root {
+      --orange-500: #f97316;
+      --orange-600: #ea580c;
+      --bg-dark: #09090b;
+      --card-dark: #141417;
+      --text-main: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --border-dark: #27272a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 460px;
+      width: 100%;
+      background: var(--card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: 1.25rem;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      background: var(--orange-500);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #ffffff;
+    }
+
+    .category-visual {
+      width: 80px;
+      height: 80px;
+      border-radius: 1rem;
+      background: rgba(249, 115, 22, 0.1);
+      border: 1px solid rgba(249, 115, 22, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--orange-500);
+    }
+
+    .main-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .sub-heading {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .message-card {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .category-message {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .protective-message {
+      font-size: 0.85rem;
+      color: var(--orange-500);
+      font-weight: 500;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.75rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border-radius: 0.625rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--orange-500);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-600);
+    }
+
+    .btn-secondary {
+      background: #27272a;
+      color: var(--text-main);
+      border: 1px solid #3f3f46;
+    }
+
+    .btn-secondary:hover {
+      background: #3f3f46;
+    }
+
+    .footer-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .countdown-note {
+      font-size: 0.75rem;
+      color: var(--orange-500);
+      font-weight: 600;
+    }
+
+    .cat-svg {
+      display: none;
+    }
+
+    .cat-svg.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Brand Header -->
+    <div class="brand-header">
+      <div class="brand-logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <span class="brand-title">RiseDefend</span>
+    </div>
+
+    <!-- Category Visual Icon (Exactly 1 shown based on detected category) -->
+    <div class="category-visual" id="categoryVisual">
+      <!-- Gambling SVG -->
+      <svg id="svgGambling" class="cat-svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="6" width="20" height="12" rx="2" />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M6 12h.01M18 12h.01" />
+      </svg>
+
+      <!-- Pornography/Adult SVG -->
+      <svg id="svgPornography" class="cat-svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
+        <line x1="1" y1="1" x2="23" y2="23" />
+      </svg>
+
+      <!-- Drugs SVG -->
+      <svg id="svgDrugs" class="cat-svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/>
+        <path d="m8.5 8.5 7 7"/>
+      </svg>
+    </div>
+
+    <h1 class="main-heading">Content Blocked</h1>
+    <p class="sub-heading">RiseDefend blocked this page because it contains restricted content.</p>
+
+    <!-- Category Message & Protective Wording -->
+    <div class="message-card">
+      <p class="category-message" id="categoryMessage">
+        RiseDefend blocked this page because it contains restricted content.
+      </p>
+      <p class="protective-message" id="protectiveMessage">
+        Protect your digital life and stay safe online.
+      </p>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button class="btn btn-secondary" id="btnGoBack">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Go Back
+      </button>
+      <button class="btn btn-primary" id="btnSafeSearch">
+        Go to Safety
+      </button>
+    </div>
+
+    <!-- Final RiseDefend Messages -->
+    <p class="footer-note">RiseDefend is here to help protect your digital life.</p>
+    <p class="countdown-note" id="countdownNote">Redirecting to safety in <span id="countdown">5</span> seconds...</p>
+  </div>
+
+  <script src="blocked.js"></script>
+</body>
+</html>

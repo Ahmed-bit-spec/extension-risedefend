@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.local-keys/
+.env
+.env.chrome
+.env.local
+.env.*.local
